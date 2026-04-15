@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rubik Cube | Three.js</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="backdrop-orb orb-a"></div>
+    <div class="backdrop-orb orb-b"></div>
+    <main class="layout">
+      <section class="panel glass">
+        <h1>Rubik Cube Lab</h1>
+        <p class="lead">
+          Drag to orbit. Use buttons or keyboard (F, B, R, L, U, D). Hold
+          Shift for prime turns.
+        </p>
+        <div class="controls-grid" id="face-controls"></div>
+        <div class="utility-row">
+          <button id="scramble" class="btn-secondary">Scramble</button>
+          <button id="reset" class="btn-secondary">Reset</button>
+        </div>
+        <p id="status" class="status">Ready</p>
+      </section>
+
+      <section class="viewer glass">
+        <canvas id="scene"></canvas>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
